@@ -1,7 +1,30 @@
-const jar = document.getElementById('jar');
+body {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-jar.addEventListener('click', () => {
-  // Bounce animation
-  jar.classList.add('bounce');
-  setTimeout(() => { jar.classList.remove('bounce'); }, 400);
-});
+#jar-container {
+  display: inline-block;
+}
+
+#jar {
+  width: 150px; /* adjust size as needed */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.2); }
+  50%  { transform: scale(0.9); }
+  75%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.bounce {
+  animation: bounce 0.4s ease;
+}
