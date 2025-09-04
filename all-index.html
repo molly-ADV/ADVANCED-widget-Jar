@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADVANCED.gg Jar Widget</title>
+  <style>
+    body {
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #jar-container {
+      display: inline-block;
+    }
+
+    #jar {
+      width: 150px; /* adjust size if needed */
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    @keyframes bounce {
+      0%   { transform: scale(1); }
+      25%  { transform: scale(1.2); }
+      50%  { transform: scale(0.9); }
+      75%  { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .bounce {
+      animation: bounce 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="jar-container">
+    <img id="jar" src="https://advanced.gg/cdn/shop/files/ADV-Focus-PineappleDragonFruit-01.png?v=1754069741&width=700" alt="ADVANCED.gg Jar">
+  </div>
+
+  <script>
+    const jar = document.getElementById('jar');
+
+    jar.addEventListener('click', () => {
+      jar.classList.add('bounce');
+      setTimeout(() => { jar.classList.remove('bounce'); }, 400);
+    });
+  </script>
+</body>
+</html>
