@@ -12,7 +12,7 @@ body {
 }
 
 #jar {
-  width: 150px; /* adjust size */
+  width: 150px; /* adjust size as needed */
   cursor: pointer;
   transition: transform 0.2s ease;
 }
